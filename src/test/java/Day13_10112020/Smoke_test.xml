@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation Suite">
+    <test name="Regression Test" preserve-order="true">
+        <classes>
+            <class name="Day13_10112020.HTML_Bing_Search_logger" />
+            <class name="Day13_10112020.HTML_Google_Search_Abstract" />
+            <class name="actionItem.Express_AI_Abstract"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
