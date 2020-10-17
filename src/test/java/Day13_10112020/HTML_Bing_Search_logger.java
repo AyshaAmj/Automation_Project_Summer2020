@@ -31,5 +31,5 @@ public class HTML_Bing_Search_logger extends Abstract_Class {
     }//end of test
 
 
-
+//Github
 }//end of java class
