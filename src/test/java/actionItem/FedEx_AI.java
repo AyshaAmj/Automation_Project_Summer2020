@@ -21,13 +21,14 @@ public class FedEx_AI extends Abstract_Class_Cross_Browser {
         Thread.sleep(2500);
         String actualTitle = driver.getTitle();
         //verify it matches the expected title
-        if (actualTitle.contains("Fedex Office Print")) {
+        if (actualTitle.contains("FedEx Office Print")) {
             System.out.println("Title matches");
             logger.log(LogStatus.PASS,"Title Matches" + actualTitle);
         } else {
             System.out.println("Title doesn't match. Actual title is " + actualTitle);
             logger.log(LogStatus.FAIL,"Title doesn't match.Actual title is " + actualTitle);
         }
+        Thread.sleep(2500);
         Reusable_Methods_Loggers.click(driver, "//*[text()='Document Printing']", "Document Printing",logger);
         Thread.sleep(3000);
         Reusable_Methods_Loggers.click(driver,"//*[@id='product-image']", "Copies & Custom Project",logger);
@@ -50,7 +51,8 @@ public class FedEx_AI extends Abstract_Class_Cross_Browser {
         Reusable_Methods_Loggers.typeAndSubmit(driver,"//*[@id='loc_seacrh_text']","11218",logger,"ZipCode");
         Thread.sleep(2500);
         String result = Reusable_Methods_Loggers.captureResult(driver,"//*[@id='5732']",logger,"Brooklyn & Nostrand ave");
-        System.out.println("My result is " + result);
+        logger.log(LogStatus.INFO,"My address is  " + result);
+        System.out.println("My address is " + result);
 
 
     }//End of @Test
